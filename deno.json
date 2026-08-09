@@ -1,0 +1,14 @@
+{
+  "name": "@ai-router/openai-sse-replay-boundary",
+  "version": "0.1.0",
+  "exports": "./src/mod.ts",
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["deno.window"]
+  },
+  "tasks": {
+    "test": "deno test --allow-read tests",
+    "check": "deno check src/mod.ts tests/*.ts",
+    "verify": "deno fmt --check && deno lint && deno task check && deno task test"
+  }
+}

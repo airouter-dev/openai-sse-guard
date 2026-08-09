@@ -1,0 +1,30 @@
+name: Publish to JSR
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Verify tag matches package version
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          expected="v$(deno eval 'const config = JSON.parse(await Deno.readTextFile("jsr.json")); console.log(config.version)')"
+          test "$RELEASE_TAG" = "$expected"
+      - run: deno task verify
+      - run: npx jsr publish

@@ -1,0 +1,17 @@
+{
+  "name": "@ai-router/openai-sse-replay-boundary",
+  "version": "0.1.0",
+  "description": "Bounded Web Streams inspection for OpenAI-compatible SSE replay decisions",
+  "license": "MIT",
+  "exports": "./src/mod.ts",
+  "publish": {
+    "include": [
+      "src",
+      "README.md",
+      "LICENSE",
+      "CHANGELOG.md",
+      "SECURITY.md",
+      "docs"
+    ]
+  }
+}
