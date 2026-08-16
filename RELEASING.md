@@ -8,5 +8,5 @@
 
 The publish workflow uses JSR GitHub Actions OIDC. Before the first publish, an
 owner must create the @ai-router scope and package in JSR, link it to
-airouter-dev/openai-sse-replay-boundary, and select publish.yml as the trusted
+airouter-dev/openai-sse-guard, and select publish.yml as the trusted
 workflow. Do not add a long-lived JSR token to the repository or workflow.

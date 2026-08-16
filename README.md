@@ -1,6 +1,6 @@
-# @ai-router/openai-sse-replay-boundary
+# @ai-router/openai-sse-guard
 
-`@ai-router/openai-sse-replay-boundary` is a Deno/Web Streams-native observer
+`@ai-router/openai-sse-guard` is a Deno/Web Streams-native observer
 for OpenAI-compatible Server-Sent Events (SSE). It answers one narrow, high-cost
 question: after a stream ends, is automatic replay still defensible?
 
@@ -17,19 +17,19 @@ The observer records bounded state so the caller can make that decision.
 ## Install from JSR
 
 ```ts
-import { SseReplayObserver } from "jsr:@ai-router/openai-sse-replay-boundary";
+import { SseReplayObserver } from "jsr:@ai-router/openai-sse-guard";
 ```
 
 Node and bundler users can use JSR's npm compatibility layer:
 
 ```bash
-npx jsr add @ai-router/openai-sse-replay-boundary
+npx jsr add @ai-router/openai-sse-guard
 ```
 
 ## Observe a Web Stream
 
 ```ts
-import { SseReplayObserver } from "jsr:@ai-router/openai-sse-replay-boundary";
+import { SseReplayObserver } from "jsr:@ai-router/openai-sse-guard";
 
 const observer = new SseReplayObserver();
 const reader = response.body!.getReader();

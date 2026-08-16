@@ -50,7 +50,7 @@ chunks. Decode incrementally, preserve an incomplete frame only up to a fixed
 limit, and discard the frame immediately after parsing:
 
 ```ts
-import { SseReplayObserver } from "jsr:@ai-router/openai-sse-replay-boundary";
+import { SseReplayObserver } from "jsr:@ai-router/openai-sse-guard";
 
 const observer = new SseReplayObserver({ maxFrameBytes: 64 * 1024 });
 const reader = response.body!.getReader();
@@ -139,5 +139,5 @@ Maintained packages in the project cover other language-specific boundaries:
 - [WHATWG Server-Sent Events](https://html.spec.whatwg.org/multipage/server-sent-events.html)
 - [OpenAI error-code guide](https://developers.openai.com/api/docs/guides/error-codes)
 - [AI-ROUTER API gateway](https://ai-router.dev/)
-- [Package API documentation on JSR](https://jsr.io/@ai-router/openai-sse-replay-boundary)
+- [Package API documentation on JSR](https://jsr.io/@ai-router/openai-sse-guard)
 - [Cross-language PHP boundary](https://packagist.org/packages/airouter/openai-compatible-errors)
