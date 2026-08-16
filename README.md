@@ -1,7 +1,7 @@
 # @ai-router/openai-sse-guard
 
-`@ai-router/openai-sse-guard` is a Deno/Web Streams-native observer
-for OpenAI-compatible Server-Sent Events (SSE). It answers one narrow, high-cost
+`@ai-router/openai-sse-guard` is a Deno/Web Streams-native observer for
+OpenAI-compatible Server-Sent Events (SSE). It answers one narrow, high-cost
 question: after a stream ends, is automatic replay still defensible?
 
 It does not send requests, sleep, retry, or retain generated text. The
