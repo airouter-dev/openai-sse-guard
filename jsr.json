@@ -1,7 +1,7 @@
 {
   "name": "@ai-router/openai-sse-guard",
   "version": "0.1.0",
-  "description": "Bounded Web Streams inspection for OpenAI-compatible SSE replay decisions",
+  "description": "Provider-neutral, bounded SSE observer for conservative replay decisions in OpenAI-compatible Deno and TypeScript clients.",
   "license": "MIT",
   "exports": "./src/mod.ts",
   "publish": {
